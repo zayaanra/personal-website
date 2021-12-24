@@ -1,3 +1,6 @@
+/* This file includes all the things needed for the website as a whole. Each page will correspond to a separate component which will be included in 
+a separate folder. */
+
 import logo from './logo.svg';
 import './App.css';
 
