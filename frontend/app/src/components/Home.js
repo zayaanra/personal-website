@@ -1,8 +1,8 @@
 /* This file will support the component for the homepage. It'll include a navbar, an image, and an About Me. */
 
-import { StyleSheet, View, Image, Text, Button, Dimensions} from "react-native";
 
-const windowWidth = Dimensions.get('window').width;
+import { StyleSheet, View, Image, Text} from "react-native";
+import TopBar from "./TopBar";
 
 const styles = StyleSheet.create({
     container: {
@@ -14,24 +14,10 @@ const styles = StyleSheet.create({
     image: {
         width: 500,
         height: 500,
+        alignItems: "center",
+        justifyContent: "center",
     },
     //TODO - Navbar should be 6 buttons layed out horizontally at the top. Button style: curved, black outline, light blue text.
-    navbar: {
-        fontFamily: "monospace",
-        backgroundColor: "white",
-        color: "lightskyblue",
-        width: windowWidth,
-        height: 100,
-        flexDirection: "row",
-    },
-    button: {
-        backgroundColor: "white",
-        fontFamily: "monospace",
-        color: "lightskyblue",
-        borderRadius: 10,
-        borderColor: "black",
-        alignItems: "top-left",
-    },
     aboutMe: {
         fontFamily: "monospace",
         color: "black",
@@ -41,14 +27,15 @@ const styles = StyleSheet.create({
 function Home() {
     return (
         <View style={styles.container}>
+            <TopBar></TopBar>
+            <View style={styles.navbar}> 
+            </View>
             <Image
                 style={styles.image}
                 source={{
                     uri: 'https://pbs.twimg.com/profile_images/1290649744616955905/BLJjEyAZ_400x400.jpg',
                 }}
             /> 
-            <View style={styles.navbar}> 
-            </View>
             <Text style={styles.aboutMe}> About Me: </Text>
         </View>
     );
