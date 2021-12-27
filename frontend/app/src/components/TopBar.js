@@ -65,11 +65,6 @@ function TopBar() {
           <Text style={styles.text}>Projects</Text>
          </View>
        </TouchableOpacity>
-      <TouchableOpacity>
-         <View style={styles.button}>
-          <Text style={styles.text}>Contact</Text>
-        </View>
-      </TouchableOpacity>
     </View>
   );
 }
