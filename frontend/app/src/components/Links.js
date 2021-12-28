@@ -1,8 +1,4 @@
 import { StyleSheet, View, Image, Text, TouchableOpacity, Linking } from "react-native";
-import * as Animatable from "react-native-animatable";
-
-//TODO - CITE CODE (ANIMATION LIBRARY)!
-//TODO - syntax error JSX from Animatable? 
 
 const styles = StyleSheet.create({
     linksBox: {
@@ -39,7 +35,7 @@ function Links() {
             <Text style={styles.linksTitle}>Links</Text>
             <View style={styles.linksImage}>
                 <TouchableOpacity onPress={() => {Linking.openURL("https://www.linkedin.com/in/zayaan-rahman-7b6368213/")}}>
-                    <Animatable.Image animation="pulse" style={{width: 25, height: 25}} source={require("../images/linkedin.png")}></Animatable.Image>
+                    <Image animation="pulse" style={{width: 25, height: 25}} source={require("../images/linkedin.png")}></Image>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {Linking.openURL("https://github.com/zayaanra")}}>
                     <Image style={{width: 25, height: 25}} source={require("../images/GitHub-Mark.png")}></Image>
