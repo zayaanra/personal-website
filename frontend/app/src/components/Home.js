@@ -1,6 +1,6 @@
 /* This file will support the component for the homepage. It'll include a navbar, an image, and an About Me. */
 
-import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Image, Text } from "react-native";
 import TopBar from "./TopBar";
 import Links from "./Links";
 
