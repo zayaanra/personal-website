@@ -20,13 +20,13 @@ const styles = StyleSheet.create({
         borderColor: "black"
     },
     name: {
-        fontFamily: "monospace",
+        fontFamily: "Iceland",
         fontSize: 50,
         color: "black",
     },
     description: {
-        fontFamily: "monospace",
-        fontSize: 16,
+        fontFamily: "Iceland",
+        fontSize: 20,
         color: "black",
         padding: 10
     },

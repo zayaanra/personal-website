@@ -26,14 +26,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 20,
     backgroundColor: "white",
-    borderWidth: 1,
+    //borderWidth: 1,
     borderStyle: "solid",
     borderColor: "black",
   },
   text: {
-    fontSize: 16,
+    fontSize: 35,
     fontWeight: "bold",
-    color: "lightskyblue"
+    color: "lightskyblue",
+    fontFamily: "Iceland"
   }
 });
   
@@ -42,27 +43,27 @@ function TopBar() {
     <View style={styles.container}>
       <TouchableOpacity>
         <View style={styles.button}>
-          <Text style={styles.text}>Home</Text>
+          <Text style={styles.text}>HOME</Text>
         </View>
       </TouchableOpacity>
       <TouchableOpacity>
         <View style={styles.button}>
-          <Text style={styles.text}>Courses</Text>
+          <Text style={styles.text}>COURSES</Text>
         </View>
       </TouchableOpacity>
       <TouchableOpacity>
         <View style={styles.button}>
-          <Text style={styles.text}>Skills</Text>
+          <Text style={styles.text}>SKILLS</Text>
         </View>
       </TouchableOpacity>
       <TouchableOpacity>
         <View style={styles.button}>
-          <Text style={styles.text}>Education</Text>
+          <Text style={styles.text}>EDUCATION</Text>
          </View>
        </TouchableOpacity>
       <TouchableOpacity>
         <View style={styles.button}>
-          <Text style={styles.text}>Projects</Text>
+          <Text style={styles.text}>PROJECTS</Text>
          </View>
        </TouchableOpacity>
     </View>

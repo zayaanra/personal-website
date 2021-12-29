@@ -11,15 +11,15 @@ const styles = StyleSheet.create({
     },
     linksTitle: {
         color: "black",
-        fontFamily: "monospace",
+        fontFamily: "Iceland",
         fontSize: 16,
         textDecorationLine: "underline",
         padding: 3
     },
     linksText: {
         color: "black",
-        fontFamily: "monospace",
-        fontSize: 16,
+        fontFamily: "Iceland",
+        fontSize: 17,
     },
     linksImage: {
         flexDirection: "row",
