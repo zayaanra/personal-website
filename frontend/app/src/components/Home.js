@@ -1,14 +1,13 @@
 /* This file will support the component for the homepage. It'll include a navbar, an image, and an About Me. */
 
-import { StyleSheet, View, Image, Text } from "react-native";
+import { StyleSheet, View, Image, Text, Animated } from "react-native";
+import React, { useRef } from 'react';
+
 import TopBar from "./TopBar";
 import Links from "./Links";
-import React, { useRef, useEffect } from 'react';
-import { Animated } from 'react-native';
 
 const Fader = (props) => {
     const fadeAnim = useRef(new Animated.Value(0)).current //opacity is initially 0
-
     React.useEffect(() => {
         Animated.timing(
             fadeAnim,
@@ -18,12 +17,13 @@ const Fader = (props) => {
             }
         ).start();
     }, [fadeAnim])
-
     return (
         <Animated.View
           style={{
                 ...props.style,
               opacity: fadeAnim,
+              alignItems: "center",
+              justifyContent: "center",
          }}
      >
             {props.children}
@@ -58,6 +58,8 @@ const styles = StyleSheet.create({
         padding: 10
     },
 })
+
+
 function Home() {
     return (
         <View style={styles.container}>
