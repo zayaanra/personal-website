@@ -3,7 +3,7 @@ a separate folder. */
 
 import React from 'react';
 import { View } from "react-native";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from './components/Home';
 
@@ -12,9 +12,8 @@ function App() {
     <Router>
       <View>
       <Routes>
-        <Route path="/">
-          <Home/>
-        </Route>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/home" element={<Home/>}/>
       </Routes>
       </View>
     </Router>
