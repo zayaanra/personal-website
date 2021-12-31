@@ -2,9 +2,11 @@
 
 import { StyleSheet, View, Image, Text, Animated } from "react-native";
 import React, { useRef } from 'react';
+import { AnimatedSVGPaths } from "react-native-svg-animations";
 
 import TopBar from "./TopBar";
 import Links from "./Links";
+import ds from "../svg/ds";
 
 const Fader = (props) => {
     const fadeAnim = useRef(new Animated.Value(0)).current //opacity is initially 0
@@ -12,8 +14,8 @@ const Fader = (props) => {
         Animated.timing(
             fadeAnim,
             {
-            toValue: 1,
-            duration: 2500,
+                toValue: 1,
+                duration: 2500,
             }
         ).start();
     }, [fadeAnim])
@@ -64,13 +66,25 @@ function Home() {
     return (
         <View style={styles.container}>
             <TopBar></TopBar>
-            <Image
-                style={styles.image}
-                source={{
-                    uri: 'https://s3-us-west-1.amazonaws.com/co-directory-images/afm-rahman-84141221.jpg',
-                }}
-            /> 
+            <View>
+  <AnimatedSVGPaths
+    strokeColor={"red"}
+    strokeWidth={5}
+    duration={10000}
+    height={600}
+    width={600}
+    scale={0.5}
+    delay={100}
+    ds={ds}
+  />
+</View>
             <Fader>
+                <Image
+                    style={styles.image}
+                    source={{
+                    uri: 'https://s3-us-west-1.amazonaws.com/co-directory-images/afm-rahman-84141221.jpg',
+                    }}
+                 /> 
                 <Text style = {styles.name}> Zayaan Rahman </Text>
                 <Text style = {styles.description}>I am a Computer Science student studying at SUNY University at Buffalo currently in my third year.</Text>
                 <Text style = {styles.description}>Currently, I am interested in cybersecurity, web development, and how important those are in the modern world.</Text>
