@@ -4,7 +4,6 @@ import { StyleSheet, View, Image, Text, Animated } from "react-native";
 import React, { useRef } from 'react';
 
 import { motion } from "framer-motion";
-import { AnimatedSVGPath } from "react-native-svg-animations";
 
 import TopBar from "./TopBar";
 import Links from "./Links";
@@ -62,6 +61,14 @@ const styles = StyleSheet.create({
         padding: 10
     },
 })
+
+const svgV = {
+    hidden: { rotate: -180 },
+    visible: {
+        rotate: 0,
+        transition: { duration : 1 }
+    }
+}
 
 function Home() {
     return (
