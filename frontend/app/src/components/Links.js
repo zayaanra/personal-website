@@ -36,14 +36,14 @@ function Links() {
             <Text style={styles.linksText}>Mobile: 631-839-0886 | E-mail: rahmanzayaan43@gmail.com</Text>
             <Text style={styles.linksTitle}>Links</Text>
             <View style={styles.linksImage}>
-                <motion.button  whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px rgb(255,255,255)" }}>
+                <motion.button style={{backgroundColor: "white"}} whileHover={{ scale: 1.5 }}>
                 <TouchableOpacity onPress={() => {Linking.openURL("https://www.linkedin.com/in/zayaan-rahman-7b6368213/")}}>
-                    <Image animation="pulse" style={{width: 25, height: 25}} source={require("../images/linkedin.png")}></Image>
+                    <Image animation="pulse" style={{width: 20, height: 20}} source={require("../images/linkedin.png")}></Image>
                 </TouchableOpacity>
                 </motion.button>
-                <motion.button whileHover={{ scale: 1.1 }}>
+                <motion.button style={{backgroundColor: "white"}} whileHover={{ scale: 1.5 }}>
                 <TouchableOpacity onPress={() => {Linking.openURL("https://github.com/zayaanra")}}>
-                    <Image style={{width: 25, height: 25}} source={require("../images/GitHub-Mark.png")}></Image>
+                    <Image style={{width: 20, height: 20}} source={require("../images/GitHub-Mark.png")}></Image>
                 </TouchableOpacity>
                 </motion.button> 
             </View>
