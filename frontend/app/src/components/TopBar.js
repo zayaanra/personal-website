@@ -8,18 +8,16 @@ import { useNavigate } from "react-router-dom";
 const windowWidth = Dimensions.get("window").width;
   
 const styles = StyleSheet.create({
-  // TODO - First and last button too close to edge
   container: {
     alignSelf: "stretch",
     width: windowWidth,
     height: 65,
     backgroundColor: "white",
-    color: "red",
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "row",
     borderWidth: 1,
-    borderBottomColor: "black"
+    borderBottomColor: "black",
   },
   button: {
     alignItems: "center",
@@ -39,7 +37,7 @@ const styles = StyleSheet.create({
     fontFamily: "Iceland"
   }
 });
-  
+
 function TopBar() {
   let nav = useNavigate();
 

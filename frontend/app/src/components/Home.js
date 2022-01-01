@@ -2,14 +2,15 @@
 
 import { StyleSheet, View, Image, Text, Animated } from "react-native";
 import React, { useRef } from 'react';
-import { AnimatedSVGPaths } from "react-native-svg-animations";
+
+import { motion } from "framer-motion";
 
 import TopBar from "./TopBar";
 import Links from "./Links";
-import ds from "../svg/ds";
 
+/* https://reactnative.dev/docs/animations */
 const Fader = (props) => {
-    const fadeAnim = useRef(new Animated.Value(0)).current //opacity is initially 0
+    const fadeAnim = useRef(new Animated.Value(0)).current
     React.useEffect(() => {
         Animated.timing(
             fadeAnim,
@@ -61,36 +62,25 @@ const styles = StyleSheet.create({
     },
 })
 
-
 function Home() {
     return (
         <View style={styles.container}>
+            <motion.div initial={{y: '-25vw'}} animate={{y: 0}} transition={{type: "spring", stiffness: 120}}>
             <TopBar></TopBar>
-            <View>
-  <AnimatedSVGPaths
-    strokeColor={"red"}
-    strokeWidth={5}
-    duration={10000}
-    height={600}
-    width={600}
-    scale={0.5}
-    delay={100}
-    ds={ds}
-  />
-</View>
-            <Fader>
-                <Image
-                    style={styles.image}
-                    source={{
-                    uri: 'https://s3-us-west-1.amazonaws.com/co-directory-images/afm-rahman-84141221.jpg',
-                    }}
-                 /> 
-                <Text style = {styles.name}> Zayaan Rahman </Text>
-                <Text style = {styles.description}>I am a Computer Science student studying at SUNY University at Buffalo currently in my third year.</Text>
-                <Text style = {styles.description}>Currently, I am interested in cybersecurity, web development, and how important those are in the modern world.</Text>
-                <Text style = {styles.description}>It was only until recently where I realized that I wanted to learn cybersecurity and web development, up until then, I had no idea what part of Computer Science I wanted to be apart of.</Text>
-                <Text style = {styles.description}>With the world we live, security threats are more important than ever and I wish to improve my understanding and help make the world a safer place.</Text>
-            </Fader>
+            </motion.div>
+                <Fader>
+                    <Image
+                        style={styles.image}
+                        source={{
+                        uri: 'https://s3-us-west-1.amazonaws.com/co-directory-images/afm-rahman-84141221.jpg',
+                        }}
+                    /> 
+                    <Text style = {styles.name}> Zayaan Rahman </Text>
+                    <Text style = {styles.description}>I am a Computer Science student studying at SUNY University at Buffalo currently in my third year.</Text>
+                    <Text style = {styles.description}>Currently, I am interested in cybersecurity, web development, and how important those are in the modern world.</Text>
+                    <Text style = {styles.description}>It was only until recently where I realized that I wanted to learn cybersecurity and web development, up until then, I had no idea what part of Computer Science I wanted to be apart of.</Text>
+                    <Text style = {styles.description}>With the world we live, security threats are more important than ever and I wish to improve my understanding and help make the world a safer place.</Text>
+                </Fader>
             <Links></Links>
         </View>
     );
