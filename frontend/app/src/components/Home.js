@@ -50,12 +50,12 @@ const styles = StyleSheet.create({
         borderColor: "black"
     },
     name: {
-        fontFamily: "Iceland",
+        fontFamily: "Raleway-Black",
         fontSize: 50,
         color: "black",
     },
     description: {
-        fontFamily: "Iceland",
+        fontFamily: "Mukta-Light",
         fontSize: 20,
         color: "black",
         padding: 10
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
 function Home() {
     return (
         <View style={styles.container}>
-            <motion.div initial={{y: '-25vw'}} animate={{y: 0}} transition={{type: "spring", stiffness: 120}}>
+            <motion.div initial={{y: '-25vw'}} animate={{y: 0}} transition={{ type: "spring", bounce: 0.5}}>
             <TopBar></TopBar>
             </motion.div>
                 <Fader>
