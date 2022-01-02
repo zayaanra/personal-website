@@ -70,15 +70,15 @@ function Home() {
             <TopBar></TopBar>
             </motion.div>
             <View style={{paddingVertical: 50}}></View>
+            <Name></Name>
                 <Fader>
                     <Image
                         style={styles.image}
                         source={{
-                       // uri: 'https://s3-us-west-1.amazonaws.com/co-directory-images/afm-rahman-84141221.jpg',
+                        uri: 'https://s3-us-west-1.amazonaws.com/co-directory-images/afm-rahman-84141221.jpg',
                         }}
                     /> 
-                    <Name></Name>
-                    {/* <Text style = {styles.name}> ZAYAAN RAHMAN </Text> */ }
+                    <Text style = {styles.name}> ZAYAAN RAHMAN </Text>
                     <View style={{paddingVertical: 10}}></View>
                     <Text style = {styles.description}>I am a Computer Science student studying at SUNY University at Buffalo currently in my third year.</Text>
                     <Text style = {styles.description}>Currently, I am interested in cybersecurity, web development, and how important those are in the modern world.</Text>
