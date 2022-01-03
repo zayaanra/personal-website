@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         borderRadius: 500,
         overflow: "hidden",
         borderWidth: 3,
-        borderColor: "black"
+        borderColor: "white"
     },
     name: {
         fontFamily: "Iceland",
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         color: "black",
     },
     description: {
-        fontFamily: "Iceland",
+        fontFamily: "Arial",
         fontSize: 20,
         color: "black",
         padding: 10
@@ -73,9 +73,7 @@ function Home() {
                 <Fader>
                     <Image
                         style={styles.image}
-                        source={{
-                        uri: 'https://s3-us-west-1.amazonaws.com/co-directory-images/afm-rahman-84141221.jpg',
-                        }}
+                        source={require("../images/index.jpg")}
                      /> 
                     <Text style = {styles.name}> ZAYAAN RAHMAN </Text>
                     <View style={{paddingVertical: 10}}></View>

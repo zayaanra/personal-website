@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const styles = StyleSheet.create({
     linksBox: {
-        backgroundColor: "white",
+        backgroundColor: "black",
         width: 1000,
         height: 100,
         borderWidth: 1,
@@ -12,14 +12,14 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     linksTitle: {
-        color: "black",
+        color: "lightgreen",
         fontFamily: "Iceland",
         fontSize: 16,
         textDecorationLine: "underline",
         padding: 3
     },
     linksText: {
-        color: "black",
+        color: "lightgreen",
         fontFamily: "Iceland",
         fontSize: 17,
     },

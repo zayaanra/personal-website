@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 35,
     fontWeight: "bold",
-    color: "lightskyblue",
+    color: "#278021",
     fontFamily: "Iceland"
   }
 });
