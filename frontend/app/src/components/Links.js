@@ -12,14 +12,14 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     linksTitle: {
-        color: "lightgreen",
+        color: "lightblue",
         fontFamily: "Iceland",
         fontSize: 16,
         textDecorationLine: "underline",
         padding: 3
     },
     linksText: {
-        color: "lightgreen",
+        color: "lightblue",
         fontFamily: "Iceland",
         fontSize: 17,
     },
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 
 function Links() {
     return(
-        <motion.div animate={{x: [-100, 100]}} transition={{ yoyo: Infinity, duration: 3, repeat: Infinity}}>
+       // <motion.div animate={{x: [-100, 100]}} transition={{ yoyo: Infinity, duration: 3, repeat: Infinity}}>
             <View style={styles.linksBox}> 
                 <Text style={styles.linksTitle}>Contact</Text>
                 <Text style={styles.linksText}>Mobile: 631-839-0886 | E-mail: rahmanzayaan43@gmail.com</Text>
@@ -49,7 +49,7 @@ function Links() {
                     </motion.button> 
                 </View>
             </View>
-        </motion.div>
+        //</motion.div>
     )
 }
 

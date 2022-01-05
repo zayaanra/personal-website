@@ -26,14 +26,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 20,
     backgroundColor: "white",
-    //borderWidth: 1,
-    //borderStyle: "solid",
-    //borderColor: "black",
   },
   text: {
     fontSize: 35,
     fontWeight: "bold",
-    color: "#278021",
+    color: "blue",
     fontFamily: "Iceland"
   }
 });
