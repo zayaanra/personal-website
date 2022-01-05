@@ -66,9 +66,7 @@ const styles = StyleSheet.create({
 function Home() {
     return (
         <View style={styles.container}>
-            <motion.div initial={{y: '-25vw'}} animate={{y: 0}} transition={{ type: "spring", bounce: 0.5}}>
             <TopBar></TopBar>
-            </motion.div>
             <View style={{paddingVertical: 50}}></View>
                 <Fader>
                     <Image
