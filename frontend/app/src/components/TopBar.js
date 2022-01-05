@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Text, Dimensions } from "react-native";
+import { motion } from "framer-motion";
+
 
 import { useNavigate } from "react-router-dom";
   
@@ -39,33 +41,35 @@ function TopBar() {
   let nav = useNavigate();
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={nav("/home")}>
-        <View style={styles.button}>
-          <Text style={styles.text}>HOME</Text>
-        </View>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => {nav("/courses")}}>
-        <View style={styles.button}>
-          <Text style={styles.text}>COURSES</Text>
-        </View>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => {nav("/skills")}}>
-        <View style={styles.button}>
-          <Text style={styles.text}>SKILLS</Text>
-        </View>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => {nav("/education")}}>
-        <View style={styles.button}>
-          <Text style={styles.text}>EDUCATION</Text>
-         </View>
-       </TouchableOpacity>
-       <TouchableOpacity onPress={() => {nav("/projects")}}>
-        <View style={styles.button}>
-          <Text style={styles.text}>PROJECTS</Text>
-         </View>
-       </TouchableOpacity>
-    </View>
+    <motion.div initial={{y: '-25vw'}} animate={{y: 0}} transition={{ type: "spring", bounce: 0.5}}>
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => {nav("/home")}}>
+          <View style={styles.button}>
+            <Text style={styles.text}>HOME</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {nav("/courses")}}>
+          <View style={styles.button}>
+            <Text style={styles.text}>COURSES</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {nav("/skills")}}>
+          <View style={styles.button}>
+            <Text style={styles.text}>SKILLS</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {nav("/education")}}>
+          <View style={styles.button}>
+            <Text style={styles.text}>EDUCATION</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {nav("/projects")}}>
+          <View style={styles.button}>
+            <Text style={styles.text}>PROJECTS</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </motion.div>
   );
 }
   
