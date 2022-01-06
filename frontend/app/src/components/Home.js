@@ -1,38 +1,13 @@
 /* This file will support the component for the homepage. It'll include a navbar, an image, and an About Me. */
 
-import { StyleSheet, View, Image, Text, Animated, Dimensions } from "react-native";
-import React, { useRef } from 'react';
+import { StyleSheet, View, Image, Text, } from "react-native";
+import React from 'react';
 
 import { motion } from "framer-motion";
 
 import TopBar from "./TopBar";
 import Links from "./Links";
-
-/* https://reactnative.dev/docs/animations */
-const Fader = (props) => {
-    const fadeAnim = useRef(new Animated.Value(0)).current
-    React.useEffect(() => {
-        Animated.timing(
-            fadeAnim,
-            {
-                toValue: 1,
-                duration: 2500,
-            }
-        ).start();
-    }, [fadeAnim])
-    return (
-        <Animated.View
-          style={{
-                ...props.style,
-              opacity: fadeAnim,
-              alignItems: "center",
-              justifyContent: "center",
-         }}
-     >
-            {props.children}
-        </Animated.View>
-    );
-}
+import Fader from "./Fader";
 
 const styles = StyleSheet.create({
     container: {
