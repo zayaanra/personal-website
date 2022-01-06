@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     },
     courseDesc: {
         fontFamily: "Arial",
-        fontSize: 15,
+        fontSize: 40,
     },
     left: {
         paddingLeft: 75
@@ -38,19 +38,51 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginVertical: 8,
-    }
+    },
 })
 
-const courses = ["CSE 115", "CSE 116", "CSE 191", "CSE 220", "CSE 250", "CSE 341", "CSE 312"]
+const courses = [
+    {
+        id: 1,
+        data: "CSE 115",
+    },
+    {
+        id: 2,
+        data: "CSE 116",
+    },
+    {
+        id: 3,
+        data: "CSE 191",
+    },
+    {
+        id: 4,
+        data: "CSE 220",
+    },
+    {
+        id: 5,
+        data: "CSE 250",
+    },
+    {
+        id: 6,
+        data: "CSE 341",
+    },
+    {
+        id: 7,
+        data: "CSE 312"
+    }
+]
 
-const Button = ({item}) => {
-    return (
-        <TouchableOpacity>
-          <View style={styles.button}>
-            <Text style={styles.courseDesc}>{item}</Text>
-          </View>
-        </TouchableOpacity>
-    )
+function Description(item) {
+    if (item === "CSE 115") {
+        return (
+            <Text style={styles.courseDesc}>In this course...</Text>
+        )
+    } else {
+        return (
+            <Text style={styles.courseDesc}>Want to learn about one of these courses? Click on them to reveal a description!</Text>
+        )
+    }
+
 }
 
 
@@ -62,14 +94,14 @@ function Courses() {
             <View style={{padding: 40}}></View>
             <View style={styles.left}>
                 <FlatList data={courses} renderItem={({item}) => 
-                 <motion.div initial={{x: '-25vw'}} animate={{x: 0}} transition={{ type: "spring", bounce: 0.5}}>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.courseName}>{item}</Text>
-                    </TouchableOpacity>
+                    <motion.div initial={{x: '-25vw'}} animate={{x: 0}} transition={{ type: "spring", bounce: 0.5}}>
+                        <TouchableOpacity onPress={() => Description(item)} style={styles.button}>
+                            <Text style={styles.courseName}>{item}</Text>
+                        </TouchableOpacity>
                     </motion.div>}>
                 </FlatList>
-                
             </View>
+            <Description></Description>
         </View>
     )
 }
