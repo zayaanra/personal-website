@@ -73,6 +73,7 @@ const courses = [
 ]
 
 function Description(item) {
+    console.log(item)
     if (item === "CSE 115") {
         return (
             <Text style={styles.courseDesc}>In this course...</Text>
@@ -85,6 +86,8 @@ function Description(item) {
 
 }
 
+let state = {visible: true}
+
 
 
 function Courses() {
@@ -95,8 +98,8 @@ function Courses() {
             <View style={styles.left}>
                 <FlatList data={courses} renderItem={({item}) => 
                     <motion.div initial={{x: '-25vw'}} animate={{x: 0}} transition={{ type: "spring", bounce: 0.5}}>
-                        <TouchableOpacity onPress={() => Description(item)} style={styles.button}>
-                            <Text style={styles.courseName}>{item}</Text>
+                        <TouchableOpacity onPress={() => Description(item.data)} style={styles.button}>
+                            <Text style={styles.courseName}>{item.data}</Text>
                         </TouchableOpacity>
                     </motion.div>}>
                 </FlatList>
