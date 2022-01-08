@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 import TopBar from "./TopBar";
 import Links from "./Links";
-import Fader from "./Fader";
+import FadeIn from "./FadeIn";
 
 const styles = StyleSheet.create({
     container: {
@@ -43,7 +43,7 @@ function Home() {
         <View style={styles.container}>
             <TopBar></TopBar>
             <View style={{paddingVertical: 50}}></View>
-                <Fader>
+                <FadeIn>
                     <Image
                         style={styles.image}
                         source={require("../images/index.jpg")}
@@ -58,7 +58,7 @@ function Home() {
                     <motion.div initial={{y: '25vw'}} animate={{y: 0}} transition={{ type: "spring", bounce: 0.5}}>
                     <Links></Links>    
                     </motion.div>
-                </Fader>
+                </FadeIn>
                 <View style={{paddingVertical: 30}}></View>
         </View>
 
