@@ -1,11 +1,14 @@
 /* This file will support a page that lists and describes the courses I have taken */
 
 import { View, StyleSheet, Text, FlatList, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 
 import { motion } from "framer-motion"
 
 import TopBar from "./TopBar";
+import CourseDesc from "./CourseDesc";
+import FadeIn from "./FadeIn";
+import FadeOut from "./FadeOut";
 
 const styles = StyleSheet.create({
     container: {
@@ -78,7 +81,7 @@ function Description(item) {
         return (
             <Text style={styles.courseDesc}>In this course...</Text>
         )
-    } else {
+    } else if(item === "First Render"){
         return (
             <Text style={styles.courseDesc}>Want to learn about one of these courses? Click on them to reveal a description!</Text>
         )
@@ -91,6 +94,7 @@ let state = {visible: true}
 
 
 function Courses() {
+    const [active, setActive] = useState("FirstRender");
     return(
         <View styles={styles.container}>
             <TopBar></TopBar>
@@ -98,13 +102,20 @@ function Courses() {
             <View style={styles.left}>
                 <FlatList data={courses} renderItem={({item}) => 
                     <motion.div initial={{x: '-25vw'}} animate={{x: 0}} transition={{ type: "spring", bounce: 0.5}}>
-                        <TouchableOpacity onPress={() => Description(item.data)} style={styles.button}>
+                        <TouchableOpacity onPress={() => {setActive(item.data)}} style={styles.button}>
                             <Text style={styles.courseName}>{item.data}</Text>
                         </TouchableOpacity>
                     </motion.div>}>
                 </FlatList>
             </View>
-            <Description></Description>
+            {active === "First Render" && <Text>First Render</Text>}
+            {active === "CSE 115" && <FadeIn><Text>CSE 115 was about...</Text></FadeIn>}
+            {active === "CSE 116" && <FadeIn><Text>CSE 116 was about...</Text></FadeIn>}
+            {active === "CSE 191" && <FadeIn><Text>CSE 191 was about...</Text></FadeIn>}
+            {active === "CSE 220" && <FadeIn><Text>CSE 220 was about...</Text></FadeIn>}
+            {active === "CSE 250" && <FadeIn><Text>CSE 250 was about...</Text></FadeIn>}
+            {active === "CSE 341" && <FadeIn><Text>CSE 341 was about...</Text></FadeIn>}
+            {active === "CSE 312" && <FadeIn><Text>CSE 312 was about...</Text></FadeIn>}
         </View>
     )
 }
