@@ -108,9 +108,9 @@ function Courses() {
                     </motion.div>}>
                 </FlatList>
             </View>
-            {active === "First Render" && <Text>First Render</Text>}
-            {active === "CSE 115" && <FadeIn><Text>CSE 115 was about...</Text></FadeIn>}
-            {active === "CSE 116" && <FadeIn><Text>CSE 116 was about...</Text></FadeIn>}
+            {active === "FirstRender" && <FadeIn>{CourseDesc("First Render")}</FadeIn>}
+            {active === "CSE 115" && <FadeIn>{CourseDesc("CSE 115")}</FadeIn>}
+            {active === "CSE 116" && <FadeIn>{CourseDesc("CSE 116")}</FadeIn>}
             {active === "CSE 191" && <FadeIn><Text>CSE 191 was about...</Text></FadeIn>}
             {active === "CSE 220" && <FadeIn><Text>CSE 220 was about...</Text></FadeIn>}
             {active === "CSE 250" && <FadeIn><Text>CSE 250 was about...</Text></FadeIn>}
