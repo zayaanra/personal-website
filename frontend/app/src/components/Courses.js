@@ -111,11 +111,11 @@ function Courses() {
             {active === "FirstRender" && <FadeIn>{CourseDesc("First Render")}</FadeIn>}
             {active === "CSE 115" && <FadeIn>{CourseDesc("CSE 115")}</FadeIn>}
             {active === "CSE 116" && <FadeIn>{CourseDesc("CSE 116")}</FadeIn>}
-            {active === "CSE 191" && <FadeIn><Text>CSE 191 was about...</Text></FadeIn>}
-            {active === "CSE 220" && <FadeIn><Text>CSE 220 was about...</Text></FadeIn>}
-            {active === "CSE 250" && <FadeIn><Text>CSE 250 was about...</Text></FadeIn>}
-            {active === "CSE 341" && <FadeIn><Text>CSE 341 was about...</Text></FadeIn>}
-            {active === "CSE 312" && <FadeIn><Text>CSE 312 was about...</Text></FadeIn>}
+            {active === "CSE 191" && <FadeIn>{CourseDesc("CSE 191")}</FadeIn>}
+            {active === "CSE 220" && <FadeIn>{CourseDesc("CSE 220")}</FadeIn>}
+            {active === "CSE 250" && <FadeIn>{CourseDesc("CSE 250")}</FadeIn>}
+            {active === "CSE 341" && <FadeIn>{CourseDesc("CSE 341")}</FadeIn>}
+            {active === "CSE 312" && <FadeIn>{CourseDesc("CSE 312")}</FadeIn>}
         </View>
     )
 }
