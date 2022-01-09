@@ -89,10 +89,6 @@ function Description(item) {
 
 }
 
-let state = {visible: true}
-
-
-
 function Courses() {
     const [active, setActive] = useState("FirstRender");
     return(
