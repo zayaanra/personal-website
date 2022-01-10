@@ -29,6 +29,9 @@ function Skills() {
     return(
         <View>
             <TopBar></TopBar>
+            <FlatList horizontal={true} data={}>
+                
+            </FlatList>
             <View style={{flexDirection: "row", flexWrap: "wrap"}}>
                 <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 0 }}>
                     <Text style={styles.skillName}>PYTHON</Text>
