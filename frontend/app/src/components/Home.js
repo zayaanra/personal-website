@@ -44,7 +44,7 @@ function Home() {
             <TopBar></TopBar>
             <View style={{paddingVertical: 50}}></View>
                 <FadeIn>
-                    <Image style={styles.image} source={require("../images/index.jpg")}/> 
+                    <Image style={styles.image} source={require("../images/temp.png")}/> 
                     <Text style = {styles.name}> ZAYAAN RAHMAN </Text>
                     <View style={{paddingVertical: 10}}></View>
                     <Text style = {styles.description}>I am a Computer Science student studying at SUNY University at Buffalo currently in my third year.</Text>
