@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "row",
-    borderWidth: 1,
+    borderWidth: 3,
     borderBottomColor: "black",
   },
   button: {
@@ -26,8 +26,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 20,
-    backgroundColor: "white",
   },
   text: {
     fontSize: 35,
@@ -56,11 +54,6 @@ function TopBar() {
         <TouchableOpacity onPress={() => {nav("/skills")}}>
           <View style={styles.button}>
             <Text style={styles.text}>SKILLS</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => {nav("/education")}}>
-          <View style={styles.button}>
-            <Text style={styles.text}>EDUCATION</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {nav("/projects")}}>
