@@ -41,6 +41,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginVertical: 8,
+        margin: 70,
+        flexDirection: "row"
     },
 })
 
@@ -75,20 +77,6 @@ const courses = [
     }
 ]
 
-function Description(item) {
-    console.log(item)
-    if (item === "CSE 115") {
-        return (
-            <Text style={styles.courseDesc}>In this course...</Text>
-        )
-    } else if(item === "First Render"){
-        return (
-            <Text style={styles.courseDesc}>Want to learn about one of these courses? Click on them to reveal a description!</Text>
-        )
-    }
-
-}
-
 function Courses() {
     const [active, setActive] = useState("FirstRender");
     return(
@@ -96,7 +84,7 @@ function Courses() {
             <TopBar></TopBar>
             <View style={{padding: 40}}></View>
             <View style={styles.left}>
-                <FlatList data={courses} renderItem={({item}) => 
+                <FlatList data={courses} showsHorizontalScrollIndicator={false} horizontal={true} renderItem={({item}) => 
                     <motion.div initial={{x: '-25vw'}} animate={{x: 0}} transition={{ type: "spring", bounce: 0.5}}>
                         <TouchableOpacity onPress={() => {setActive(item.data)}} style={styles.button}>
                             <Text style={styles.courseName}>{item.data}</Text>
@@ -104,6 +92,7 @@ function Courses() {
                     </motion.div>}>
                 </FlatList>
             </View>
+            <View style={{padding: 100}}></View>
             {active === "FirstRender" && <FadeIn>{CourseDesc("First Render")}</FadeIn>}
             {active === "CSE 115" && <FadeIn>{CourseDesc("CSE 115")}</FadeIn>}
             {active === "CSE 116" && <FadeIn>{CourseDesc("CSE 116")}</FadeIn>}

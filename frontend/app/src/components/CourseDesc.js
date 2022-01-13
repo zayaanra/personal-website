@@ -13,7 +13,7 @@ function CourseDesc(name) {
         return (
             <View>
             <Text style={styles.courseDesc}>CSE 115 was an introductory course that provided a 
-            first-look at JSON, using APIs, as well as loops and variables using Python and JavaScript. The project for this course required us to pull data from the city of
+            first-look at JSON, using APIs, as well as loops, variables, and functions using Python and JavaScript. The project for this course required us to pull data from the city of
             Buffalo using an API and a web framework as back-end (Bottle in Python). The repository for this project is available on my GitHub. </Text>
             </View>
         )
@@ -64,8 +64,7 @@ function CourseDesc(name) {
     } else {
         return (
             <View>
-                <Text style={styles.courseDesc}>Want to learn about one of these courses?</Text> 
-                <Text style={styles.courseDesc}>Click on them to reveal a description!</Text>
+                <Text style={styles.courseDesc}>To learn about a course, click on the corresponding button.</Text> 
             </View>
         )
     }
