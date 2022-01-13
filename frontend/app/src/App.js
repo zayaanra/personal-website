@@ -9,7 +9,6 @@ import Home from './components/Home';
 import Courses from './components/Courses';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Education from './components/Education';
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
         <Route path="/courses" element={<Courses/>}/>
         <Route path="/skills" element={<Skills/>}/>
         <Route path="/projects" element={<Projects/>}/>
-        <Route path="/education" element={<Education/>}/>
       </Routes>
       </View>
     </Router>
