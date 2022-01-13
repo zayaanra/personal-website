@@ -44,10 +44,7 @@ function Home() {
             <TopBar></TopBar>
             <View style={{paddingVertical: 50}}></View>
                 <FadeIn>
-                    <Image
-                        style={styles.image}
-                        source={require("../images/index.jpg")}
-                     /> 
+                    <Image style={styles.image} source={require("../images/index.jpg")}/> 
                     <Text style = {styles.name}> ZAYAAN RAHMAN </Text>
                     <View style={{paddingVertical: 10}}></View>
                     <Text style = {styles.description}>I am a Computer Science student studying at SUNY University at Buffalo currently in my third year.</Text>
@@ -56,7 +53,7 @@ function Home() {
                     <Text style = {styles.description}>With the world we live, security threats are more important than ever and I wish to improve my understanding and help make the world a safer place.</Text>
                     <View style={{paddingVertical: 30}}></View>
                     <motion.div initial={{y: '25vw'}} animate={{y: 0}} transition={{ type: "spring", bounce: 0.5}}>
-                    <Links></Links>    
+                        <Links></Links>    
                     </motion.div>
                 </FadeIn>
                 <View style={{paddingVertical: 30}}></View>
