@@ -1,6 +1,6 @@
 /* This file will support a page that lists and describes the skills that I have */
 
-import { View, StyleSheet, Text, FlatList } from "react-native";
+import { View, StyleSheet, Text, FlatList, Dimensions} from "react-native";
 import React from "react";
 
 import { motion } from "framer-motion";
@@ -20,63 +20,42 @@ const styles = StyleSheet.create({
     skillName: {
         fontFamily: "Iceland",
         fontSize: 40,
-        paddingLeft: 20
+        padding: 250
     }
     
 })
+
+const skills = [["Python", "JavaScript", "C (language)"], ["Scala", "Java", "React-Native"], ["MySQL", "Docker", "MongoDB"], ["Linux", "Git"]]
+
+const offscreen = Dimensions.get("window").width * -1;
 
 function Skills() {
     return(
         <View>
             <TopBar></TopBar>
-            <FlatList horizontal={true} data={}>
-                
+            <View style={{padding: 50}}></View>
+            <FlatList horizontal={true} data={skills[0]} renderItem={({item}) =>
+                <motion.div initial={{x: offscreen}} animate={{x: 25}} transition={{ type: "tween",  delay: 0.5  }}>
+                    <Text style={styles.skillName}>{item}</Text>
+                </motion.div>}>     
             </FlatList>
-            <View style={{flexDirection: "row", flexWrap: "wrap"}}>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 0 }}>
-                    <Text style={styles.skillName}>PYTHON</Text>
-                </motion.div>
-                <View style={{padding: 150}}></View>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 0.5 }}>
-                    <Text style={styles.skillName}>JAVASCRIPT</Text>
-                </motion.div>
-                <View style={{padding: 150}}></View>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 1 }}>
-                    <Text style={styles.skillName}>DOCKER</Text>
-                </motion.div>
-                <View style={{padding: 150}}></View>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 1.5 }}>
-                    <Text style={styles.skillName}>MYSQL</Text>
-                </motion.div>
-                <View style={{padding: 150}}></View>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 2.0 }}>
-                    <Text style={styles.skillName}>LINUX</Text>
-                </motion.div>
-                <View style={{padding: 150}}></View>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 2.5}}>
-                    <Text style={styles.skillName}>GIT</Text>
-                </motion.div>
-                <View style={{padding: 150}}></View>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 3.0 }}>
-                    <Text style={styles.skillName}>MONGODB</Text>
-                </motion.div>
-                <View style={{padding: 150}}></View>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 3.5 }}>
-                    <Text style={styles.skillName}>C (LANGUAGE)</Text>
-                </motion.div>
-                <View style={{padding: 150}}></View>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 4.0 }}>
-                    <Text style={styles.skillName}>SCALA</Text>
-                </motion.div>
-                <View style={{padding: 150}}></View>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 4.5 }}>
-                    <Text style={styles.skillName}>JAVA</Text>
-                </motion.div>
-                <View style={{padding: 150}}></View>
-                <motion.div initial={{y: '100vw'}} animate={{y: 50}} transition={{ type: "tween", delay: 5.0 }}>
-                    <Text style={styles.skillName}>REACT-NATIVE</Text>
-                </motion.div>
-            </View>
+            <View style={{padding: 150}}></View>
+            <FlatList horizontal={true} data={skills[1]} renderItem={({item}) =>
+                <motion.div initial={{x: offscreen}} animate={{x: 25}} transition={{ type: "tween",  delay: 1.0 }}>
+                    <Text style={styles.skillName}>{item}</Text>
+                </motion.div>}>     
+            </FlatList>
+            <View style={{padding: 50}}></View>
+            <FlatList horizontal={true} data={skills[2]} renderItem={({item}) =>
+                <motion.div initial={{x: offscreen}} animate={{x: 25}} transition={{ type: "tween",  delay: 1.5 }}>
+                    <Text style={styles.skillName}>{item}</Text>
+                </motion.div>}>     
+            </FlatList>
+            <FlatList horizontal={true} data={skills[3]} renderItem={({item}) =>
+                <motion.div initial={{x: offscreen}} animate={{x: 25}} transition={{ type: "tween",  delay: 1.5 }}>
+                    <Text style={styles.skillName}>{item}</Text>
+                </motion.div>}>     
+            </FlatList>
         </View>
     )
 }
