@@ -1,6 +1,6 @@
 /* This file will support a page that lists and describes the skills that I have */
 
-import { View, StyleSheet, Text, FlatList, Dimensions} from "react-native";
+import { View, StyleSheet, Text, FlatList, Dimensions, Image} from "react-native";
 import React from "react";
 
 import { motion } from "framer-motion";
@@ -8,54 +8,68 @@ import { motion } from "framer-motion";
 import TopBar from "./TopBar";
 
 const styles = StyleSheet.create({
-    column1: {
-        flexDirection: "column"
+    container: {
+        flexWrap: "wrap",
     },
-    column2: {
-
+    left: {
+        alignItems: "flex-start",
+        justifyContent: "center",
     },
-    column2: {
-
+    middle: {
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    right: {
+        alignItems: "flex-end",
+        justifyContent: "center",
     },
     skillName: {
         fontFamily: "Iceland",
         fontSize: 40,
         padding: 250
-    }
-    
+    },
+    image: {
+        width: 175,
+        height: 175,
+        borderRadius: 100,
+        backgroundColor: "white",
+        borderWidth: 3,
+        borderColor: "black",
+        marginLeft: 100,
+        marginRight: 100
+    },
 })
-
-const skills = [["Python", "JavaScript", "C (language)"], ["Scala", "Java", "React-Native"], ["MySQL", "Docker", "MongoDB"], ["Linux", "Git"]]
-
-const offscreen = Dimensions.get("window").width * -1;
 
 function Skills() {
     return(
         <View>
             <TopBar></TopBar>
-            <View style={{padding: 50}}></View>
-            <FlatList horizontal={true} data={skills[0]} renderItem={({item}) =>
-                <motion.div initial={{x: offscreen}} animate={{x: 25}} transition={{ type: "tween",  delay: 0.5  }}>
-                    <Text style={styles.skillName}>{item}</Text>
-                </motion.div>}>     
-            </FlatList>
-            <View style={{padding: 150}}></View>
-            <FlatList horizontal={true} data={skills[1]} renderItem={({item}) =>
-                <motion.div initial={{x: offscreen}} animate={{x: 25}} transition={{ type: "tween",  delay: 1.0 }}>
-                    <Text style={styles.skillName}>{item}</Text>
-                </motion.div>}>     
-            </FlatList>
-            <View style={{padding: 50}}></View>
-            <FlatList horizontal={true} data={skills[2]} renderItem={({item}) =>
-                <motion.div initial={{x: offscreen}} animate={{x: 25}} transition={{ type: "tween",  delay: 1.5 }}>
-                    <Text style={styles.skillName}>{item}</Text>
-                </motion.div>}>     
-            </FlatList>
-            <FlatList horizontal={true} data={skills[3]} renderItem={({item}) =>
-                <motion.div initial={{x: offscreen}} animate={{x: 25}} transition={{ type: "tween",  delay: 1.5 }}>
-                    <Text style={styles.skillName}>{item}</Text>
-                </motion.div>}>     
-            </FlatList>
+            <View style={{flexWrap: "wrap"}}>
+            <View styles={styles.left}>
+                <View style={{padding: 50}}/>
+                <Image style={styles.image} source={require("../images/python-logo.png")}/>
+                <View style={{padding: 50}}/>
+                <Image style={styles.image} source={require("../images/js-logo.png")}/>
+                <View style={{padding: 50}}/>
+                <Image style={styles.image} source={require("../images/c-logo.png")}/>
+            </View>
+            <View style={styles.middle}>
+                <View style={{padding: 50}}/>
+                <Image style={styles.image} source={require("../images/java-logo.png")}/>
+                <View style={{padding: 50}}/>
+                <Image style={styles.image} source={require("../images/scala-logo.png")}/>
+                <View style={{padding: 50}}/>
+                <Image style={styles.image} source={require("../images/linux-logo.png")}/>
+            </View>
+            <View style={styles.right}>
+                <View style={{padding: 50}}/>
+                <Image style={styles.image} source={require("../images/docker-logo.png")}/>
+                <View style={{padding: 50}}/>
+                <Image style={styles.image} source={require("../images/mysql-logo.png")}/>
+                <View style={{padding: 50}}/>
+                <Image style={styles.image} source={require("../images/mongodb-logo.png")}/>
+            </View>
+            </View>
         </View>
     )
 }
