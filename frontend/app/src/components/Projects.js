@@ -26,6 +26,12 @@ const styles = StyleSheet.create({
         fontFamily: "Arial",
         fontSize: 20,
         textDecorationLine: "underline"
+    },
+    image: {
+        width: 500,
+        height: 350,
+        borderWidth: 3,
+        borderColor: "black"
     }
 })
 
@@ -35,7 +41,7 @@ function Projects() {
             <TopBar></TopBar>
             <FadeIn>
                 <Text style={styles.name}>BULLBOARD</Text>
-                <Image style={{width: 550, height: 350}} source={require("../images/bullboard.png")}/>
+                <Image style={styles.image} source={require("../images/bullboard.png")}/>
                 <Text style={styles.desc}>This project was completed with four other team members and is an application designed to
                 help students with housing.</Text>
                 <Text style={styles.desc}>Users are allowed to register, login, and customize their own profiles. 
@@ -49,7 +55,7 @@ function Projects() {
             <View style={{padding: 20}}/>
             <FadeIn>
                 <Text style={styles.name}>PERSONAL WEBSITE</Text>
-                <Image style={{width: 550, height: 350}} source={require("../images/temp.png")}/>
+                <Image style={styles.image} source={require("../images/pw.png")}/>
                 <Text style={styles.desc}>This website was a project I completed over Winter break as a way to learn React-Native and more JavaScript.</Text>
                 <Text style={styles.desc}>Specifically, I learned what React is, the differences between React and React-Native/Expo.</Text>
                 <Text style={styles.desc}>In terms of building the website, I learned the importance of React hooks, components, and the various open source libraries provided for React-Native.</Text>
@@ -61,7 +67,6 @@ function Projects() {
             <View style={{padding: 20}}/>
             <FadeIn>
                 <Text style={styles.name}>DYNAMIC MEMORY ALLOCATOR</Text>
-                <Image style={{width: 550, height: 350}} source={require("../images/temp.png")}/>
                 <Text style={styles.desc}>This project was completed during the course of CSE 220 (Systems Programming) in C.</Text>
                 <Text style={styles.desc}>This allocator replaced standard C allocation functions such as as malloc, calloc, and realloc.</Text>
                 <Text style={styles.desc}>Things I learned include how the stack and heap work and how memory is allocated.</Text>
