@@ -23,11 +23,6 @@ const styles = StyleSheet.create({
         alignItems: "flex-end",
         justifyContent: "center",
     },
-    skillName: {
-        fontFamily: "Iceland",
-        fontSize: 40,
-        padding: 250
-    },
     image: {
         width: 175,
         height: 175,
@@ -40,37 +35,45 @@ const styles = StyleSheet.create({
     },
 })
 
+const offscreen = Dimensions.get("window").width * -1;
+
 function Skills() {
     return(
         <View>
             <TopBar></TopBar>
-            <View style={{flexWrap: "wrap"}}>
-            <View styles={styles.left}>
-                <View style={{padding: 50}}/>
-                <Image style={styles.image} source={require("../images/python-logo.png")}/>
-                <View style={{padding: 50}}/>
-                <Image style={styles.image} source={require("../images/js-logo.png")}/>
-                <View style={{padding: 50}}/>
-                <Image style={styles.image} source={require("../images/c-logo.png")}/>
+            <View style={{flex: 1, flexWrap: "wrap", flexDirection: "row"}}>
+                <motion.div initial={{x: offscreen}} animate={{x: 0}} transition={{type: "tween", delay: 0.5}}>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/python-logo.png")}/>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/js-logo.png")}/>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/c-logo.png")}/>
+                </motion.div>
+                <motion.div initial={{x: offscreen}} animate={{x: 0}} transition={{type: "tween", delay: 1.0}}>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/java-logo.png")}/>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/scala-logo.png")}/>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/linux-logo.png")}/>
+                </motion.div>
+                <motion.div initial={{x: offscreen}} animate={{x: 0}} transition={{type: "tween", delay: 1.5}}>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/docker-logo.png")}/>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/mysql-logo.png")}/>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/mongodb-logo.png")}/>
+                </motion.div>
+                <motion.div initial={{x: offscreen}} animate={{x: 0}} transition={{type: "tween", delay: 2.0}}>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/git-logo.png")}/>
+                    <View style={{padding: 50}}/>
+                    <Image style={styles.image} source={require("../images/react-logo.png")}/>
+                </motion.div>
             </View>
-            <View style={styles.middle}>
-                <View style={{padding: 50}}/>
-                <Image style={styles.image} source={require("../images/java-logo.png")}/>
-                <View style={{padding: 50}}/>
-                <Image style={styles.image} source={require("../images/scala-logo.png")}/>
-                <View style={{padding: 50}}/>
-                <Image style={styles.image} source={require("../images/linux-logo.png")}/>
             </View>
-            <View style={styles.right}>
-                <View style={{padding: 50}}/>
-                <Image style={styles.image} source={require("../images/docker-logo.png")}/>
-                <View style={{padding: 50}}/>
-                <Image style={styles.image} source={require("../images/mysql-logo.png")}/>
-                <View style={{padding: 50}}/>
-                <Image style={styles.image} source={require("../images/mongodb-logo.png")}/>
-            </View>
-            </View>
-        </View>
     )
 }
 
