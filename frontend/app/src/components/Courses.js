@@ -1,6 +1,6 @@
 /* This file will support a page that lists and describes the courses I have taken */
 
-import { View, StyleSheet, Text, FlatList, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Text, FlatList, TouchableOpacity, Dimensions } from "react-native";
 import React, { useState } from "react";
 
 import { motion } from "framer-motion"
@@ -8,7 +8,6 @@ import { motion } from "framer-motion"
 import TopBar from "./TopBar";
 import CourseDesc from "./CourseDesc";
 import FadeIn from "./FadeIn";
-import FadeOut from "./FadeOut";
 
 const styles = StyleSheet.create({
     container: {
@@ -28,8 +27,6 @@ const styles = StyleSheet.create({
     },
     left: {
         paddingLeft: 75
-        //alignItems: "center",
-        //justifyContent: "center",
     },
     button: {
         borderRadius: 20,
@@ -83,7 +80,6 @@ function Courses() {
         <View styles={styles.container}>
             <TopBar></TopBar>
             <View style={{padding: 40}}></View>
-            <View style={styles.left}>
                 <FlatList data={courses} showsHorizontalScrollIndicator={false} horizontal={true} renderItem={({item}) => 
                     <motion.div initial={{x: '-25vw'}} animate={{x: 0}} transition={{ type: "spring", bounce: 0.5}}>
                         <TouchableOpacity onPress={() => {setActive(item.data)}} style={styles.button}>
@@ -91,7 +87,6 @@ function Courses() {
                         </TouchableOpacity>
                     </motion.div>}>
                 </FlatList>
-            </View>
             <View style={{padding: 100}}></View>
             {active === "FirstRender" && <FadeIn>{CourseDesc("First Render")}</FadeIn>}
             {active === "CSE 115" && <FadeIn>{CourseDesc("CSE 115")}</FadeIn>}
