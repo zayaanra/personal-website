@@ -53,7 +53,7 @@ function Home() {
                     <Text style = {styles.description}>With the world we live, security threats are more important than ever and I wish to improve my understanding and help make the world a safer place.</Text>
                     <View style={{paddingVertical: 30}}></View>
                     <motion.div initial={{y: '25vw'}} animate={{y: 0}} transition={{ type: "spring", bounce: 0.5}}>
-                        <Links></Links>    
+                        <Links/>   
                     </motion.div>
                 </FadeIn>
                 <View style={{paddingVertical: 30}}></View>
