@@ -49,6 +49,7 @@ function Home() {
                     <View style={{paddingVertical: 10}}></View>
                     <Text style = {styles.description}>I am a Computer Science student studying at SUNY University at Buffalo currently in my third year.</Text>
                     <Text style = {styles.description}>Currently, I am interested in cybersecurity, web development, and how important those are in the modern world.</Text>
+                    <Text>Test</Text>
                     <Text style = {styles.description}>With the world we live, security threats are more important than ever and I wish to improve my understanding and help make the world a safer place.</Text>
                     <View style={{paddingVertical: 30}}></View>
                     <motion.div initial={{y: '25vw'}} animate={{y: 0}} transition={{ type: "spring", bounce: 0.5}}>
