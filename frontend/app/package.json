@@ -2,9 +2,7 @@
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://zayaanra.github.io/personal-website",
   "dependencies": {
-    "@react-spring/web": "^9.3.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -12,8 +10,6 @@
     "framer-motion": "^5.5.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-native-svg": "^12.1.1",
-    "react-native-svg-animations": "^0.2.6",
     "react-native-web": "^0.17.5",
     "react-router-dom": "^6.2.1",
     "react-router-native": "^6.2.1",
@@ -24,9 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
