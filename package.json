@@ -13,7 +13,6 @@
     "react-native-web": "^0.17.5",
     "react-router-dom": "^6.2.1",
     "react-router-native": "^6.2.1",
-    "react-scripts": "5.0.0",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
@@ -46,6 +45,6 @@
     "@babel/preset-flow": "^7.16.5",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.3",
-    "react-scripts": "5.0.0"
+    "react-scripts": "^5.0.0"
   }
 }
